@@ -1,0 +1,8 @@
+*.vscode*
+
+## for running the projects using command line
+*cmake*
+*CMake*
+*CMakeLists.txt*
+*CMakeFiles*
+*Make*
