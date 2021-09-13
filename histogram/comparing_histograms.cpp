@@ -26,6 +26,10 @@ int main(){
     calcHist(&img1, 1, 0, Mat(), hist_1, 1, &histSize, histRange);
     calcHist(&img2, 1, 0, Mat(), hist_2, 1, &histSize, histRange);
 
+    // Normalizing the histograms
+    normalize(hist_1, hist_1, 1.0);
+    normalize(hist_2, hist_2, 1.0);
+
     // comparing the two histograms
     double correlation = compareHist(hist_1, hist_2, HISTCMP_CORREL);
     double intersection = compareHist(hist_1, hist_2, HISTCMP_INTERSECT);
